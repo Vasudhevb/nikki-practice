@@ -3,12 +3,12 @@ provider "aws" {
   
 }
 
-resource "aws_instance" "nikkidhev" {
-    ami = "ami-08bf489a05e916bbd"
-    instance_type = "t2.micro"
-    key_name = "anuraj"
+resource "aws_instance" "nikki" {
+    ami = var.ami
+    instance_type = var.instance_type
+    key_name = var.key_name
     tags = {
-      Name = "nikkidhav"
+      Name = "nikkidhev"
     }
   
 }

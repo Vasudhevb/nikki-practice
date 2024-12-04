@@ -27,11 +27,11 @@ resource "aws_instance" "nikkidhev" {
     ami = var.ami
     instance_type = var.instance_type
     key_name = var.key_name
-    #for_each = toset(var.sandboxes)
-    count = length(var.sandboxes)
+    for_each = toset(var.sandboxes)
+    #count = length(var.sandboxes)
     tags = {
-      #Name = each.value
-      Name = var.sandboxes[count.index]
+      Name = "sandbox-${each.value}"
+      #Name = var.sandboxes[count.index]
     }
      
   
