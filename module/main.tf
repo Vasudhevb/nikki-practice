@@ -4,7 +4,7 @@ provider "aws" {
 
 module "dhev" {
   source        = "../eccc2"
-  ami       =   var.ami
-  instance_type = var.instance_type
-  key_name      = var.key_name
+  ami       =   "ami-0453ec754f44f9a4a"
+  instance_type = "t2.micro"
+  key_name      = "anuraj"
 }
